@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {},
   "bin": {
-    "adjective-adjective-animal": "index.js",
-    "aaa": "index.js"
+    "a3": "index.js"
   },
   "repository": {
     "type": "git",
@@ -21,5 +20,9 @@
   ],
   "author": "Elliot Berry",
   "license": "MIT",
-  "homepage": "https://github.com/a-type/adjective-adjective-animal"
+  "homepage": "https://github.com/a-type/adjective-adjective-animal",
+  "dependencies": {
+    "chalk": "^3.0.0",
+    "change-case": "^4.1.1"
+  }
 }
