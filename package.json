@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {},
   "bin": {
-    "a3": "index.js"
+    "a3": "./cli.js"
   },
   "repository": {
     "type": "git",
@@ -23,6 +23,8 @@
   "homepage": "https://github.com/a-type/adjective-adjective-animal",
   "dependencies": {
     "chalk": "^3.0.0",
-    "change-case": "^4.1.1"
+    "change-case": "^4.1.1",
+    "convict": "^5.2.1",
+    "random-number-csprng": "^1.0.2"
   }
 }
