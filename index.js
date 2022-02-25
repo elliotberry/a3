@@ -1,35 +1,19 @@
 #!/usr/bin/env node
-const generate = require("./lib/index");
-const defaults = require("./lib/defaults-config");
-console.log(defaults)
-const { format, numberOfAdjectives } = defaults;
+import generate from "./lib/lib.js";
+import chalk from "chalk";
 
-const chalk = require("chalk");
-
-let u = process.argv.join(" ");
-if (u.indexOf("help") > -1 || u.indexOf("-h") > -1) {
+let argzString = process.argv.join(" ");
+if (argzString.indexOf("help") > -1 || argzString.indexOf("-h") > -1) {
   console.log(`
 ${chalk.white.bold("🐈🐈🐈   A3: Adjective Adjective Animal   🐈🐈🐈")}
-> Outputs some random adjectives and a random animal, for slugs, or something. 
-> Usage: ${chalk.white.bgBlackBright(
-    "$ a3 [number of adjectives, default 2] [output format]"
-  )}
-> Example: ${chalk.white.bgBlackBright("$ a3 3 camelCase")}
-
-Output formats are ${chalk.green("camelCase")}, ${chalk.green(
-    "capitalCase"
-  )}, ${chalk.green("constantCase")}, ${chalk.green("dotCase")}, ${chalk.green(
-    "headerCase"
-  )}, ${chalk.green("noCase")}, ${chalk.green("paramCase")}, ${chalk.green(
-    "pascalCase"
-  )}, ${chalk.green("pathCase")}, ${chalk.green(
-    "sentenceCase"
-  )}, and ${chalk.green("snakeCase")}.`);
+> Outputs some random adjectives and a random animal, for slugs, or something. `);
 } else {
-  generate({
-    adjectives: numberOfAdjectives,
-    format: format,
-  }).then(function (output) {
+  let numberOfAdjectives = process.argv[2] || 1;
+  let format = process.argv[3] || "string";
+  generate(
+    numberOfAdjectives,
+    format
+  ).then(function (output) {
     console.log(chalk.green.bold(output));
   });
 }
