@@ -1,11 +1,11 @@
 {
   "name": "adjective-adjective-animal",
-  "version": "1.4.0",
-  "description": "Suitably random and reasonably unique human readable (and fairly adorable) ids",
+  "version": "1.4.2",
+  "description": "kinda sorta random and reasonably unique human readable (and sometimes adorable) ids",
   "main": "index.js",
-  "scripts": {},
+
   "bin": {
-    "a3": "./index.js"
+    "aaa": "./index.js"
   },
   "type": "module",
   "repository": {
@@ -17,14 +17,15 @@
     "id",
     "animal",
     "adjective",
-    "name"
+    "name",
+    "fun",
+    "computers",
+    "walmart.com/animals"
   ],
   "author": "Elliot Berry",
-  "license": "MIT",
+  "license": "property is theft",
   "dependencies": {
     "chalk": "^3.0.0",
-    "change-case": "^4.1.1",
-    "convict": "^5.2.1",
-    "random-number-csprng": "^1.0.2"
+    "change-case": "^4.1.1"
   }
 }
