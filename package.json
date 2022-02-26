@@ -1,6 +1,6 @@
 {
   "name": "adjective-adjective-animal",
-  "version": "1.4.2",
+  "version": "1.4.3",
   "description": "kinda sorta random and reasonably unique human readable (and sometimes adorable) ids",
   "main": "index.js",
 
@@ -10,7 +10,7 @@
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "https://github.com/a-type/adjective-adjective-animal.git"
+    "url": "https://github.com/elliotberry/adjective-adjective-animal.git"
   },
   "keywords": [
     "random",
