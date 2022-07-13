@@ -1,7 +1,6 @@
-
 # Adjective Adjective Animal 
 
-Kinda unique and kinda random IDs using all the unique adjectives and animal names I could find online in 4 hours.
+mildly random and reasonably unique human-readable ID strings using all the unique adjectives and animal names I could find online in 4 hours.
 
 ## Usage
 

@@ -1,9 +1,8 @@
 {
   "name": "adjective-adjective-animal",
   "version": "1.4.3",
-  "description": "kinda sorta random and reasonably unique human readable (and sometimes adorable) ids",
+  "description": "mildly random and reasonably unique human-readable ID strings.",
   "main": "index.js",
-
   "bin": {
     "aaa": "./index.js"
   },
@@ -23,7 +22,7 @@
     "walmart.com/animals"
   ],
   "author": "Elliot Berry",
-  "license": "property is theft",
+  "license": "the unlicense",
   "dependencies": {
     "chalk": "^3.0.0",
     "change-case": "^4.1.1"
