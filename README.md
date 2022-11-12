@@ -1,7 +1,8 @@
 # Adjective Adjective Animal 
 ![](https://i.postimg.cc/FKgYHYPj/download-1.png)
+Greatly expands work done by a-type here: a-type/adjective-adjective-animal
 
-mildly random and reasonably unique human-readable ID strings using all the unique adjectives and animal names I could find online in 4 hours.
+Random and reasonably unique human-readable ID strings using all the unique adjectives and animal names I could find online in 4 hours.
 
 ## Usagé
 
