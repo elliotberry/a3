@@ -1,7 +1,7 @@
 {
-  "name": "adjective-adjective-animal",
-  "version": "1.4.3",
-  "description": "mildly random and reasonably unique human-readable ID strings.",
+  "name": "two-adjectives-one-animal",
+  "version": "1.5.8",
+  "description": "cute three-work IDs similar to a variety of modern site slug generators.",
   "main": "index.js",
   "bin": {
     "aaa": "./index.js",
