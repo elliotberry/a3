@@ -4,7 +4,9 @@
   "description": "mildly random and reasonably unique human-readable ID strings.",
   "main": "index.js",
   "bin": {
-    "aaa": "./index.js"
+    "aaa": "./index.js",
+    "adjective-adjective-animal": "./index.js",
+    "a3": "./index.js"
   },
   "type": "module",
   "repository": {
@@ -21,10 +23,11 @@
     "computers",
     "walmart.com/animals"
   ],
-  "author": "Elliot Berry",
+  "author": "Me",
   "license": "the unlicense",
   "dependencies": {
-    "chalk": "^3.0.0",
-    "change-case": "^4.1.1"
+    "chalk": "^5.1.2",
+    "change-case": "^4.1.2",
+    "yargs": "^17.6.2"
   }
 }
