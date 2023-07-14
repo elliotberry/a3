@@ -1,5 +1,5 @@
 # Adjective Adjective Animal 
-![](./a3.jpg[](https://github.com/a-type/adjective-adjective-animal))
+![](./a3.jpg)
 
 Cute slugs from the terminal in seconds. Random and reasonably unique human-readable ID strings using all the unique adjectives and animal names I could find online in 4 hours.
 
