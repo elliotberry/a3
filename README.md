@@ -1,8 +1,10 @@
 # Adjective Adjective Animal 
-![](./a3.jpg)
-Greatly expands work done by a-type here: a-type/adjective-adjective-animal
+![](./a3.jpg[](https://github.com/a-type/adjective-adjective-animal))
 
-Random and reasonably unique human-readable ID strings using all the unique adjectives and animal names I could find online in 4 hours.
+Cute slugs from the terminal in seconds. Random and reasonably unique human-readable ID strings using all the unique adjectives and animal names I could find online in 4 hours.
+
+Greatly expands work done by a-type [here](https://github.com/a-type/adjective-adjective-animal).
+
 
 ## Usagé
 
@@ -11,10 +13,9 @@ Random and reasonably unique human-readable ID strings using all the unique adje
     ```sh
     $ yarn global add elliotberry/adjective-adjective-animal
     ```
-    (or `npm install -g` if you aren't cool)
 
-2. Scream in 2 the terminal:
+2. Scream in 2 da terminal:
 
    ```sh
-    $ aaa
+    $ a3
     ```
