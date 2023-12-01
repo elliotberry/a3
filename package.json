@@ -1,10 +1,12 @@
 {
-  "name": "two-adjectives-one-animal",
-  "version": "0.0.8",
-  "description": "cute three-work IDs similar to a variety of modern site slug generators",
-  "main": "index.js",
+  "name": "aaa",
+  "version": "0.0.9",
+  "private": false,
+  "description": "cute three-word IDs similar to a variety of modern site slug generators. QUIRKY for real",
+  "module": "./index.js",
+  "main": "./index.js",
   "bin": {
-    "a3": "./index.js"
+    "aaa": "./index.js"
   },
   "type": "module",
   "repository": {
@@ -14,18 +16,23 @@
   "keywords": [
     "random",
     "id",
+    "cryptography",
+    "adult-cryptography",
+    "NSA",
+    "Advanced-cryptography",
+    "quantum-resistant",
     "animal",
     "adjective",
     "name",
     "fun",
-    "computers",
-    "walmart.com/animals"
+    "computers"
   ],
-  "author": "Elliot B",
-  "license": "the unlicense",
+  "author": "ɛʟʟɨօȶ b",
+  "license": "The Unlicense",
   "dependencies": {
-    "chalk": "^5.1.2",
-    "change-case": "^4.1.2",
-    "yargs": "^17.6.2"
+    "chalk": "^5.3.0",
+    "change-case": "^5.2.0",
+    "change-case-all": "^2.1.0",
+    "yargs": "^17.7.2"
   }
 }
