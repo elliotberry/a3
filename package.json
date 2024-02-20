@@ -33,7 +33,6 @@
   "license": "The Unlicense",
   "dependencies": {
     "chalk": "^5.3.0",
-    "change-case": "^5.2.0",
     "change-case-all": "^2.1.0",
     "yargs": "^17.7.2"
   }
