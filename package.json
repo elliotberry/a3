@@ -1,20 +1,26 @@
 {
-  "name": "aaa",
-  "version": "0.0.9",
+  "name": "a-three",
+  "version": "0.0.10",
   "private": false,
   "description": "cute three-word IDs similar to a variety of modern site slug generators. QUIRKY for real",
-  "module": "./index.js",
   "main": "./index.js",
   "bin": {
     "aaa": "./index.js",
-    "adjective-adjective-animal": "./index.js",
     "a3": "./index.js"
   },
-  "type": "module",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/elliotberry/adjective-adjective-animal.git"
+  "devDependencies": {
+    "@stylistic/eslint-plugin-js": "^2.1.0",
+    "eslint": "^9.2.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-perfectionist": "^2.10.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-simple-import-sort": "^12.1.0",
+    "eslint-plugin-unicorn": "^53.0.0",
+    "prettier": "^3.2.5"
   },
+  "type": "module",
   "keywords": [
     "random",
     "id",
@@ -29,7 +35,7 @@
     "fun",
     "computers"
   ],
-  "author": "ɛʟʟɨօȶ b",
+  "author": "Grant Forrest",
   "license": "The Unlicense",
   "dependencies": {
     "chalk": "^5.3.0",
