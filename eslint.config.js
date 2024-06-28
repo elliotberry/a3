@@ -1,4 +1,3 @@
-import pluginImport from 'eslint-plugin-import';
 import perfectionistNatural from 'eslint-plugin-perfectionist/configs/recommended-natural';
 import prettierConfig from 'eslint-plugin-prettier/recommended';
 import is from 'eslint-plugin-simple-import-sort';
@@ -16,9 +15,6 @@ export default [
       sourceType: 'module',
     },
     plugins: {
-      import: pluginImport,
-      pluginImport,
-
       'simple-import-sort': is,
     },
 
