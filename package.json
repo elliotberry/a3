@@ -1,6 +1,6 @@
 {
   "name": "a-three",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "private": false,
   "description": "cute three-word IDs similar to a variety of modern site slug generators. QUIRKY for real",
   "main": "./index.js",
