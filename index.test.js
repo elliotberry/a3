@@ -1,29 +1,69 @@
-import assert from 'assert';
+import assert from 'node:assert/strict';
 import {describe, it} from 'node:test';
 
-import {describeAllOptions,format} from './lib/format.js';
-import {generate, randomAdjective,randomAnimal} from './lib/lib.js';
+import main, {format, generate} from './index.js';
+import {randomAdjective, randomAnimal} from './lib/lib.js';
 import adjectives from './lib/lists/adjectives.js';
 import animals from './lib/lists/animals.js';
 
 describe('generate', () => {
-  it('should return a sentence with at least two words', async () => {
-    let sentence = await generate();
-    let words = sentence.split(' ');
-    assert(words.length >= 2, 'generate should return a sentence with at least two words');
+  it('returns adjectives followed by an animal', () => {
+    const words = generate(2);
+    assert.equal(words.length, 3);
+    assert.ok(adjectives.includes(words[0]));
+    assert.ok(adjectives.includes(words[1]));
+    assert.ok(animals.includes(words[2]));
   });
 
-  it('each word except the last in the sentence should be an adjective', async () => {
-    let sentence = await generate();
-    let words = sentence.split(' ');
-    for (const word of words.slice(0, -1)) {
-      assert(adjectives.includes(word), 'Each word except the last in the sentence should be an adjective');
+  it('respects the adjective count', () => {
+    assert.equal(generate(0).length, 1);
+    assert.equal(generate(1).length, 2);
+    assert.equal(generate(3).length, 4);
+  });
+
+  it('defaults to two adjectives', () => {
+    assert.equal(generate().length, 3);
+  });
+});
+
+describe('random helpers', () => {
+  it('randomAdjective returns an adjective', () => {
+    assert.ok(adjectives.includes(randomAdjective()));
+  });
+
+  it('randomAnimal returns an animal', () => {
+    assert.ok(animals.includes(randomAnimal()));
+  });
+});
+
+describe('main', () => {
+  it('returns an array by default', () => {
+    const result = main(2);
+    assert.ok(Array.isArray(result));
+    assert.equal(result.length, 3);
+  });
+
+  it('formats when a format type is given', () => {
+    const result = main(1, 'param');
+    assert.equal(typeof result, 'string');
+    assert.match(result, /^[a-z]+-[a-z]+$/);
+  });
+});
+
+describe('format', () => {
+  it('supports common cases', () => {
+    assert.equal(format('blue happy fox', 'camel'), 'blueHappyFox');
+    assert.equal(format('blue happy fox', 'pascal'), 'BlueHappyFox');
+    assert.equal(format('blue happy fox', 'snake'), 'blue_happy_fox');
+    assert.equal(format('blue happy fox', 'param'), 'blue-happy-fox');
+  });
+});
+
+describe('word lists', () => {
+  it('does not include known inappropriate terms', () => {
+    for (const word of ['nazi', 'raped', 'retarded', 'tit', 'cockroach']) {
+      assert.equal(adjectives.includes(word), false, `adjective list still has ${word}`);
+      assert.equal(animals.includes(word), false, `animal list still has ${word}`);
     }
-  });
-
-  it('the last word in the sentence should be an animal', async () => {
-    let sentence = await generate();
-    let words = sentence.split(' ');
-    assert(animals.includes(words.at(-1)), 'The last word in the sentence should be an animal');
   });
 });

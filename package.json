@@ -1,44 +1,67 @@
 {
   "name": "a-three",
-  "version": "0.0.12",
-  "private": false,
-  "description": "cute three-word IDs similar to a variety of modern site slug generators. QUIRKY for real",
-  "main": "./index.js",
-  "bin": {
-    "aaa": "./cli.js",
-    "a3": "./cli.js"
-  },
-  "devDependencies": {
-    "@stylistic/eslint-plugin-js": "^4.1.0",
-    "eslint": "^9.21.0",
-    "eslint-config-prettier": "^10.0.2",
-    "eslint-plugin-perfectionist": "^4.9.0",
-    "eslint-plugin-prettier": "^5.2.3",
-    "eslint-plugin-simple-import-sort": "^12.1.1",
-    "eslint-plugin-unicorn": "^57.0.0",
-    "prettier": "^3.5.2",
-    "release-it": "^18.1.2"
-  },
+  "version": "0.1.0",
+  "description": "Cute human-readable IDs: adjective + adjective + animal",
   "type": "module",
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js"
+  },
+  "bin": {
+    "a3": "./cli.js",
+    "aaa": "./cli.js"
+  },
+  "files": [
+    "index.js",
+    "cli.js",
+    "lib/**/*.js",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "node --test index.test.js",
+    "lint": "eslint ."
+  },
   "keywords": [
     "random",
     "id",
-    "cryptography",
-    "adult-cryptography",
-    "NSA",
-    "advanced-cryptography",
-    "quantum-resistant",
-    "animal",
+    "slug",
+    "human-readable",
     "adjective",
-    "name",
-    "fun",
-    "computers"
+    "animal",
+    "cli",
+    "name-generator"
   ],
-  "author": "Grant Forrest",
-  "license": "The Unlicense",
+  "author": "elliotberry",
+  "contributors": [
+    "Grant Forrest"
+  ],
+  "license": "Unlicense",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elliotberry/a3.git"
+  },
+  "bugs": {
+    "url": "https://github.com/elliotberry/a3/issues"
+  },
+  "homepage": "https://github.com/elliotberry/a3#readme",
+  "engines": {
+    "node": ">=18"
+  },
   "dependencies": {
-    "chalk": "^5.4.1",
+    "chalk": "^6.0.0",
     "change-case-all": "^2.1.0",
-    "yargs": "^17.7.2"
+    "yargs": "^18.1.0"
+  },
+  "devDependencies": {
+    "@stylistic/eslint-plugin-js": "^4.4.1",
+    "eslint": "^10.8.1",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-perfectionist": "^5.10.1",
+    "eslint-plugin-prettier": "^5.5.6",
+    "eslint-plugin-simple-import-sort": "^14.0.0",
+    "eslint-plugin-unicorn": "^73.0.0",
+    "prettier": "^3.9.6",
+    "release-it": "^21.0.2"
   }
 }
