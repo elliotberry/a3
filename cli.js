@@ -1,10 +1,11 @@
 #!/usr/bin/env node
 import chalk from 'chalk';
-import yargs from 'yargs/yargs';
 import {hideBin} from 'yargs/helpers';
+import yargs from 'yargs/yargs';
 
-import {describeAllOptions} from './lib/format.js';
 import main from './index.js';
+import {A3Error} from './lib/errors.js';
+import {describeAllOptions} from './lib/format.js';
 
 const run = async () => {
   const argv = await yargs(hideBin(process.argv))
@@ -12,26 +13,42 @@ const run = async () => {
     .usage('Usage: $0 [options]')
     .option('f', {
       alias: 'format',
+      default: 'string',
       describe: `output format; options:\n${describeAllOptions()}`,
       type: 'string',
-      default: 'string',
     })
     .option('a', {
       alias: 'adjectives',
+      default: 2,
       describe: 'number of adjectives before the animal',
       type: 'number',
-      default: 2,
+    })
+    .option('s', {
+      alias: 'seed',
+      describe: 'seed for deterministic output (same seed, same name)',
+      type: 'string',
     })
     .example('$0 -f capital', 'create a random name in Capital Case')
     .example('$0 -a 1 -f param', 'one adjective, kebab-case')
+    .example('$0 -s user-42', 'always the same name for "user-42"')
     .help()
     .version()
     .parse();
 
   const numberOfAdjectives = argv.adjectives;
   const formatType = String(argv.format).toLowerCase();
-  const result = main(numberOfAdjectives, formatType);
-  console.log(chalk.green(result));
+
+  try {
+    const result = main(numberOfAdjectives, formatType, {seed: argv.seed});
+    console.log(chalk.green(result));
+  } catch (error) {
+    if (error instanceof A3Error) {
+      console.error(chalk.red(`Error [${error.code}]: ${error.message}`));
+      process.exitCode = 1;
+      return;
+    }
+    throw error;
+  }
 };
 
 run();
